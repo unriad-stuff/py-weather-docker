@@ -5,7 +5,6 @@ VOLUME /src
 COPY . /src/py-weather
 COPY saver.py generate_points.py requirements.txt /src/
 COPY config.ini /src/config.example.ini
-ADD pyweather /src/pyweather
 WORKDIR /src
 
 RUN pip install -r requirements.txt
