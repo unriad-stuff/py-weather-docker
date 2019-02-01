@@ -1,11 +1,12 @@
 FROM python
 MAINTAINER Andrew Chumchal <andrew@andrewchumchal.com>
 
-VOLUME /src/
+VOLUME /src
+COPY . /src/py-weather
 COPY saver.py generate_points.py requirements.txt /src/
 COPY config.ini /src/config.example.ini
-ADD py-weather /src/py-weather
+ADD pyweather /src/pyweather
 WORKDIR /src
 
 RUN pip install -r requirements.txt
-RUN python generate_points.py
+CMD ["python3", "-u", "/src/generate_points.py"]
