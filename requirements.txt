@@ -1,0 +1,4 @@
+pymongo
+shapely
+pyproj
+reverse_geocoder
