@@ -13,7 +13,7 @@ delta_t=y-x
 secs=delta_t.seconds+1
 
 onfig = configparser.ConfigParser()
-config.read('config/config.ini')
+config.read('config.ini')
 
 API_KEY = config['API']['KEY']
 url = config['API']['URL']
